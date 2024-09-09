@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: cursive;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+.logo a{
+    font-size: 2.3em;
+    color: black ;
+}
+.logo a:hover{
+    opacity: 0.4;
+}
+
+.nav-links{
+    display: flex;
+    background: black;
+    padding: 20px 2px;
+    border-radius: 15px;
+}
+.nav-links li{
+    margin-left: 25px;
+}
+.nav-links li a{
+    color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+    padding: 5px 20px 5px 20px;
+}
+.nav-links li a:hover , .nav-links .active{
+    color: black;   
+    background-color: white;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.signup a{
+    content:'';
+    color: white;
+    background-color: #2E073F ;
+    padding: 15px 20px ;
+    border-radius: 10px;
+}
+.signup a:hover{
+    color: black;
+    background-color:#EBD3F8;
+}
+.crt{
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.crt a{
+    border-radius: 10px;
+    padding: 15px 20px;
+    color: white;
+    background-color: #2E0249;
+}
+.crt a:hover{
+    color:#570A57 ;
+    background-color: #F806CC;
+}
+#check{
+    display: none;
+}
+.menu-btn{
+    display: none;
+    font-size:30px;
+    color: #F73D93;
+    cursor: pointer;
+}
+@media(max-width:1020px ){
+    .menu-btn{
+        display: block;
+    }
+    #check:checked ~ .menu-btn i:before{
+        content: "\f00d";
+    } 
+    
+    .nav-links{
+        position: fixed;
+        width: 100%;
+        top: 80px;
+        left: -100%;
+        background: #E63E6D ;
+        text-align: center;
+        height: 100vh;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .nav-links li{
+        margin: 35px 20px;
+    }
+    .main{
+        display: block;
+        top: 80%;   
+    }
+    #check:checked ~ .nav-links{
+        left: 0;
+    }
+    .crt{
+        margin: 50px 10px;
+        justify-content: end;
+    }
+}
